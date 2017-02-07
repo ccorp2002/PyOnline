@@ -1,2 +1,2 @@
 # PyOnline
-Python online--Utilizes the Skulpt
+Python online--Utilizes the Skulpt JS lib.
