@@ -1,13 +1,7 @@
 body {
     background: url("PyOnlineBG.jpg");
-}
-
-h1 {
-    color: white;
+    font-family: Monospace;
+    font-size: 24px;
+    color: orange;
     text-align: center;
-}
-
-p {
-    font-family: verdana;
-    font-size: 20px;
 }
