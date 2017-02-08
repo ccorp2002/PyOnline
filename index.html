@@ -14,18 +14,29 @@ This library allows you to write python and run it on the web!<br>
 function outf(text) { 
     var mypre = document.getElementById("output"); 
     mypre.innerHTML = mypre.innerHTML + text; 
-} 
+}
+Sk.externalLibraries = {
+            numpy : {
+                path: 'http://example.com/static/primeronoo/skulpt/external/numpy/__init__.js',
+                dependencies: ['/static/primeronoo/skulpt/external/deps/math.js'],
+            },
+            matplotlib : {
+                path: '/static/primeronoo/skulpt/external/matplotlib/__init__.js'
+            },
+            "matplotlib.pyplot" : {
+                path: '/static/primeronoo/skulpt/external/matplotlib/pyplot/__init__.js',
+                dependencies: ['/static/primeronoo/skulpt/external/deps/d3.min.js'],
+            },
+            "arduino": {
+                path: '/static/primeronoo/skulpt/external/arduino/__init__.js'
+            }
+        };
 function builtinRead(x) {
     if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
             throw "File not found: '" + x + "'";
     return Sk.builtinFiles["files"][x];
 }
 
-// Here's everything you need to run a python program in skulpt
-// grab the code from your textarea
-// get a reference to your pre element for output
-// configure the output function
-// call Sk.importMainWithBody()
 function runit() { 
    var prog = document.getElementById("Code").value; 
    var mypre = document.getElementById("output"); 
