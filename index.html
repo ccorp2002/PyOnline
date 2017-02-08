@@ -18,23 +18,6 @@ function builtinRead(x) {
             throw "File not found: '" + x + "'";
     return Sk.builtinFiles["files"][x];
 }
- Sk.externalLibraries = {
-            numpy : {
-                path: 'http://example.com/static/primeronoo/skulpt/external/numpy/__init__.js',
-                dependencies: ['/static/primeronoo/skulpt/external/deps/math.js'],
-            },
-            matplotlib : {
-                path: '/static/primeronoo/skulpt/external/matplotlib/__init__.js'
-            },
-            "matplotlib.pyplot" : {
-                path: '/static/primeronoo/skulpt/external/matplotlib/pyplot/__init__.js',
-                dependencies: ['/static/primeronoo/skulpt/external/deps/d3.min.js'],
-            },
-            "arduino": {
-                path: '/static/primeronoo/skulpt/external/arduino/__init__.js'
-            }
-        };
-
 function runit() { 
    var prog = document.getElementById("yourcode").value; 
    var mypre = document.getElementById("output"); 
@@ -60,8 +43,8 @@ function runit() {
 </textarea><br /> 
 <button type="button" onclick="runit()">Run</button> 
 </form> 
-<pre id="output" ></pre> 
-<div id="mycanvas"></div> 
+<pre id="Output" ></pre> 
+<div id="Canvas"></div> 
 
 </body> 
 
