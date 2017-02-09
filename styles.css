@@ -20,3 +20,14 @@ body {
     align-items: center;
     justify-content: center:
 }
+#output {
+    background-color: lightgrey;
+    font-family: Arial;
+    font-size: 12px;
+    color: magenta;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    justify-content: center:
+}
